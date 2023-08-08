@@ -6,10 +6,11 @@ import { AaaModule } from './aaa/aaa.module';
 import { BbbModule } from './bbb/bbb.module';
 import { CccModule } from './ccc/ccc.module';
 import { DddModule } from './ddd/ddd.module';
+import { AaaController } from './aaa.controller';
 
 @Module({
   imports: [PersonModule, AaaModule, BbbModule, CccModule, DddModule],
-  controllers: [AppController],
+  controllers: [AppController, AaaController],
   providers: [AppService, {
     provide: 'person2',
     useFactory() {
